@@ -1,0 +1,1 @@
+export const baseURL = 'https://aroundus-api.onrender.com'

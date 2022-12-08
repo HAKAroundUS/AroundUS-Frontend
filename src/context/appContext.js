@@ -26,6 +26,7 @@ import {
     GET_SHOP_CITY_SUCCESS,
     HANDLE_CHANGE
 } from "./action"
+import { baseURL } from '../constants/baseURL';
 
 const token = localStorage.getItem('token')
 const user = localStorage.getItem('user')
@@ -74,7 +75,7 @@ const AppProvider = ({ children }) => {
     const registerUser = async (currentUser) => {
         dispatch({ type: REGISTER_USER_BEGIN });
         try {
-            const { data } = await axios.post('/v1/user/register', currentUser)
+            const { data } = await axios.post(`${baseURL}/v1/user/register`, currentUser)
             console.log(data)
             const { user, token } = await data.data
             dispatch({
@@ -92,7 +93,7 @@ const AppProvider = ({ children }) => {
     const loginUser = async (currentUser) => {
         dispatch({ type: LOGIN_USER_BEGIN });
         try {
-            const { data } = await axios.post('/v1/user/login', currentUser);
+            const { data } = await axios.post(`${baseURL}/v1/user/login`, currentUser);
             console.log(data)
             const { user, token } = data.data
             dispatch({ type: LOGIN_USER_SUCCESS, payload: { user, token } })
@@ -115,7 +116,7 @@ const AppProvider = ({ children }) => {
         dispatch({ type: ADD_SHOP_BEGIN });
         try {
             console.log(currentShop)
-            const { data } = await axios.post("/v1/shops", currentShop, {
+            const { data } = await axios.post(`${baseURL}/v1/shops`, currentShop, {
                 headers: {
                     authorization: `Bearer ${token}`,
                 },
@@ -129,7 +130,7 @@ const AppProvider = ({ children }) => {
     const getShops = async () => {
         dispatch({ type: GET_SHOP_BEGIN })
         try {
-            const { data } = await axios.get('/v1/getshops', {
+            const { data } = await axios.get(`${baseURL}/v1/getshops`, {
                 headers: {
                     authorization: `Bearer ${token}`
                 }
@@ -145,7 +146,7 @@ const AppProvider = ({ children }) => {
     const addTag = async (currTag) => {
         dispatch({ type: ADD_TAG_BEGIN })
         try {
-            const { data } = await axios.post('/v1/tags', currTag, {
+            const { data } = await axios.post(`${baseURL}/v1/tags`, currTag, {
                 headers: {
                     authorization: `Bearer ${token}`
                 }
@@ -162,7 +163,7 @@ const AppProvider = ({ children }) => {
         try {
             console.log(currentTag)
             console.log(token)
-            const { data } = await axios.post('/v1/tags/delete', currentTag, {
+            const { data } = await axios.post(`${baseURL}/v1/tags/delete`, currentTag, {
                 headers: {
                     authorization: `Bearer ${token}`
                 }
@@ -177,8 +178,7 @@ const AppProvider = ({ children }) => {
         dispatch({ type: GET_SHOP_CITY_BEGIN })
 
         try {
-            const url = `/v1/shops?city=${city}`
-            const { data } = await axios.get(url)
+            const { data } = await axios.get(`${baseURL}/v1/shops?city=${city}`)
             console.log(data.data.coords)
             dispatch({ type: GET_SHOP_CITY_SUCCESS, payload: { content: data.data.shops, num: data.data.shops.length, cityCoords: data.data.coords } })
         } catch (error) {
