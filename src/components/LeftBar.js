@@ -3,6 +3,7 @@ import Logo from "../components/Logo"
 import Wrapper from "../assets/Wrappers/LeftBar.js"
 import { useEffect, useState } from "react"
 import { useAppContext } from "../context/appContext"
+import Navbar from "./Navbar.js"
 const LeftBar = () => {
     const [city, setCity] = useState(false);
     const [value, setValue] = useState('')
@@ -22,7 +23,10 @@ const LeftBar = () => {
     }
     return (
         <Wrapper>
-            <Logo />
+
+            <div className="logo">
+                <img src="./bg.png" alt="bg" />
+            </div>
 
             <div className="search">
                 <form className="form">

@@ -4,8 +4,8 @@ const Wrapper = styled.main`
 
 
     display: flex;
-    justify-content: right;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
     padding:0.5rem;
    
    

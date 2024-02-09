@@ -111,7 +111,6 @@ const AppProvider = ({ children }) => {
         removeUserfromLocalStorage()
     }
     const addShop = async (currentShop) => {
-        console.log(currentShop)
         console.log('Adding Shop..', currentShop)
         dispatch({ type: ADD_SHOP_BEGIN });
         try {

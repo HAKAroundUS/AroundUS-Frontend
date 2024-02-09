@@ -25,7 +25,7 @@ const Tags = (props) => {
         console.log(currentTag)
         deleteTag(currentTag)
         // getShops()
-        window.location.reload(false);
+        window.location.reload();
     }
     return (
         <Wrapper style={color}>

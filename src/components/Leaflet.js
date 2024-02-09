@@ -10,6 +10,7 @@ import iconShadow from 'leaflet/dist/images/marker-shadow.png'
 import RightBar from "./RightBar"
 const Leaflet = ({ showNav, selectedPosition, setSelectedPosition }) => {
   const { cityShops, tag, coords } = useAppContext()
+  console.log(cityShops)
   const [coordinates, setCoordinates] = useState(undefined)
 
   let markerIcon = L.icon({

@@ -31,10 +31,10 @@ const Shop = (props) => {
                         <button className='btn' onClick={editHandler}>Edit Shop</button>
                     </div>
                     <div className='actions'>
-                        <button className='btn btn-danger' onClick={deleteHandler}>Delete Handler</button>
+                        <button className='btn btn-danger' onClick={deleteHandler}>Delete Shop</button>
                     </div>
                 </footer>
-                {showEdit && <EditPage shopId={props.shopId} tags={props.tags}  />}
+                {showEdit && <EditPage shopId={props.shopId} tags={props.tags} />}
             </div>
         </Wrapper>
     )

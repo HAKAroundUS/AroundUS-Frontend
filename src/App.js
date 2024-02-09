@@ -5,6 +5,7 @@ import Landing from './Pages/LandingPage';
 import OwnerPage from './Pages/OwnerPage';
 import ShopRegister from './Pages/ShopRegister';
 import { useAppContext } from '../src/context/appContext'
+import Navbar from './components/Navbar';
 // import { useEffect } from 'react';
 // import { useNavigate } from 'react-router-dom'
 function App() {

@@ -13,6 +13,11 @@ const Wrapper = styled.section`
   .form {
     max-width: 400px;
     border-top: 5px solid green;
+    border-radius: 10px;
+    
+  }
+  .form:hover{
+    transform: scale(1.05);
   }
 
   h3 {

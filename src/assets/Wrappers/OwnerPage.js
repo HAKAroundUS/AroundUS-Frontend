@@ -8,9 +8,9 @@ const Wrapper = styled.main`
   /* align-items: center; */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  width: 70%;
+  width: 80%;
   margin: 2rem auto;
-  height: 83vh;
+  /* height: 83vh; */
   /* height: 90vh; */
   border-top: 4px solid green;
   h2 {
@@ -43,13 +43,12 @@ const Wrapper = styled.main`
   }
   .child {
     width: 90%;
-    // Extra
 
   }
   .in-form {
     width: 100%;
     border-top: 4px solid green;
-    // Extra
+    /* // Extra */
     height: 52vh;
     /* overflow: scroll;  */
     padding-top: 0rem;
@@ -61,9 +60,18 @@ const Wrapper = styled.main`
     margin-top: 2rem
   }
   .shops {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
+    /* display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    /* padding: 1rem;
+    /* flex-wrap: wrap; 
+    /* margin: 2px; */
+    display : inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: normal;
+    align-content: normal;
   }
   .member-btn {
     margin-top: 0.5rem;

@@ -25,11 +25,11 @@ const Wrapper = styled.main`
   border-top: 1px solid black;
  }
  .tags{
-   display: flex;
+        display: flex;
         justify-content: flex-start;
         align-items: center;
         background-color: whitesmoke;
-        height: 150px;
+        /* height: 150px; */
         margin: 1rem auto;
         border-radius: 0.25rem;
         padding: 0.5rem;

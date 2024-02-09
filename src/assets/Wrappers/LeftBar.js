@@ -8,10 +8,15 @@ const Wrapper = styled.main`
     justify-content: center;
     align-items: center;
     ${'' /* padding-top: 50px; */}
-    /* background-image: url(https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
-    background-position: center; */
+    
+    /* background-position: center; */
+   
     height: 100vh;
-    background-color: white;
+    /* background-color: var(--green-light); */
+    background: url('./bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-position; */
     border-right: 3px solid green;
     
 
@@ -20,16 +25,18 @@ const Wrapper = styled.main`
   }
     .logo{
         color: green;
-        margin-bottom: 2%;
-        padding: 2px;
-        display: flex;
+        
+        /* margin-bottom: 2%; */
+        display: hidden;
         align-items: center;
         justify-content: center;
+        font-size: 30px;
         ${'' /* margin-bottom: 40px; */}
     }
     .logo img{
-        width: 40%;
-        height: 40%;
+      opacity: 0;
+        width: 100%;
+        height: 100%;
     }
     .form {
     width: 400px;
@@ -51,7 +58,7 @@ const Wrapper = styled.main`
       ${'' /* margin: 0 2%; */}
       align-items: center;
       text-align: center;
-
+      overflow: hidden;
       /* background: rgba( 255, 255, 255, 0.1 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 4px );
